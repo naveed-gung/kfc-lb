@@ -1,0 +1,137 @@
+/* General Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .category-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .product-card {
+    background: transparent;
+    height: 400px;
+    min-height: 350px; 
+    max-width: 400px;
+    border-radius: 8px;
+    padding: 15px;
+    flex: 1 1 calc(33.333% - 20px); /* Default: 3 cards per row */
+    text-align: center;
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .pagination {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .cart-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+  }
+
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+        :root {
+          font-size: 14px;
+        }
+    .product-card {
+      flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .product-card {
+      flex: 1 1 100%; /* 1 card per row */
+    }
+    .btn-group { 
+        right: 5%;
+        font-size: 0.87rem;
+    }
+  }
+
+/* Skeleton Loader Styles */
+.skeleton-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 20px);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 400px; /* Match product card height */
+  }
+  
+  .skeleton-image {
+    width: 100%;
+    height: 200px; /* Match product image height */
+    background: #e0e0e0;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  
+  /* Update animation for smoother effect */
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .skeleton-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: shimmer 2s infinite;
+  }
+  
+  /* Add responsive grid layout */
+  @media (max-width: 768px) {
+    .skeleton-card {
+      flex: 1 1 calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .skeleton-card {
+      flex: 1 1 100%;
+    }
+  }
+
+  
