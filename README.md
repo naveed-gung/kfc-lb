@@ -9,7 +9,6 @@ A modern, responsive React application for KFC restaurant menu management with r
 - Shopping cart management
 - Responsive design
 - Loading animations
-- Favorites system
 - Points/rewards system
 - Order history
 
