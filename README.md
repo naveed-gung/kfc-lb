@@ -1,5 +1,7 @@
 # 🍗 KFC Restaurant React App
 
+![KFC App Screenshot](src/kfc.png)
+
 A modern, responsive React application for KFC restaurant menu management with real-time search, cart functionality, and category filtering.
 
 ## ✨ Features
